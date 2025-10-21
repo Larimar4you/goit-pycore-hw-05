@@ -14,18 +14,18 @@ F(n) = F(n-1) + F(n-2), де F(0) = 0, F(1) = 1.
 
 """
 """
-# # Написать простую внешнюю функцию.
+# Use
 # def outer_function(x):
-#     def inner_function(y):  # Внутри неё создать внутреннюю функцию.
+# def inner_function(y):  #
 
-#         return x + y  # Использовать переменные внешней функции внутри внутренней.
+# return x + y  # Use outer f in inner.
 
-#     return inner_function  # return inner — чтобы внутренняя функция “жила” после выхода из внешней.
+# return inner_function  # return inner function
 
 
-# # Пример использования:
+# # return sum(numbers):
 
-# add_five = outer_function(5)  # создаём функцию, которая всегда прибавляет 5
+# add_five = outer_function(5)  #  Створюемо замкнення с x = 5
 # print(add_five(10))  # 15
 # print(add_five(2))  # 7
 
@@ -35,7 +35,7 @@ def caching_fibonacci():
 
     def fibonacci(n):
         if n in cache:  # Перевіряємо, чи є значення в кеші
-            return cache[n]  # функция должна возвращать значение кэша
+            return cache[n]  # функция повинна повертати значення кэша
         if n == 0:
             result = 0
         elif n == 1:
