@@ -15,26 +15,24 @@
 
 
 def caching_fibonacci():
-    cache = {}  # Створюємо кеш для зберігання обчислених значень
+    cache = {}
 
     def fibonacci(n):
-        if n in cache:  # Перевіряємо, чи є значення в кеші
-            return cache[n]  # функция повинна повертати значення кэша
+        if n in cache:
+            return cache[n]
         if n == 0:
             result = 0
         elif n == 1:
             result = 1
         else:
-            result = fibonacci(n - 1) + fibonacci(
-                n - 2
-            )  # Рекурсивний виклик Использование рекурсии для вычисления чисел Фибоначчи.
-        cache[n] = result  # Зберігаємо обчислене значення в кеш
-        return result  # функция должна возвращать значение кэша
+            result = fibonacci(n - 1) + fibonacci(n - 2)
+        cache[n] = result
+        return result
 
-    return fibonacci  # Повертаємо внутрішню функцію
+    return fibonacci
 
 
-# Используем функцию fibonacci для вычисления чисел Фибоначчи
+# using fibonacci
 fibonacci = caching_fibonacci()
 print(fibonacci(10))  # 55
 print(fibonacci(15))  # 610

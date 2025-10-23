@@ -6,17 +6,17 @@ def generator_numbers(text: str) -> Generator[float, None, None]:
     """Аналізує текст і повертає генератор дійсних чисел.
     Дійсні числа відокремлені пробілами."""
 
-    pattern = r"(?<!\S)-?\d+\.\d+(?!\S)"  # Регулярний вираз для пошуку дійсних чисел, відокремлених пробілами
+    pattern = r"(?<!\S)-?\d+\.\d+(?!\S)"  
     for match in re.finditer(
         pattern, text
-    ):  # Ітеруємося по всіх знайдених співпадіннях
-        yield float(match.group(0))  # Повертаємо знайдене число як float
+    ):  
+        yield float(match.group(0))  
 
 
 def sum_profit(text: str, func: Callable[[str], Generator[float, None, None]]) -> float:
     """Використовує функцію-генератор для обчислення загальної суми чисел."""
     numbers = func(text)
-    return sum(numbers)  # Використовуємо генератор для обчислення суми чисел у тексті
+    return sum(numbers) 
 
 
 # Приклад використання:
