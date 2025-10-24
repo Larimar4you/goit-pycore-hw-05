@@ -1,19 +1,3 @@
-# Use
-# def outer_function(x):
-# def inner_function(y):  #
-
-# return x + y  # Use outer f in inner.
-
-# return inner_function  # return inner function
-
-
-# # return sum(numbers):
-
-# add_five = outer_function(5)  #  Створюемо замкнення с x = 5
-# print(add_five(10))  # 15
-# print(add_five(2))  # 7
-
-
 def caching_fibonacci():
     cache = {}
 
